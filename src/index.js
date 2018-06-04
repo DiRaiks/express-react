@@ -3,11 +3,13 @@ import ReactDom from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import App from './App.jsx';
+import Registration from './containers/Registration.jsx';
 
 ReactDom.render(
     <BrowserRouter>
         <Switch>
-            <Route path='/' component={App}/>
+            <Route exact path='/' component={App}/>
+            <Route path='/registration' component={Registration}/>
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));
